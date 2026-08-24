@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\cpaciente.csproj|c:\\users\\alexis aldana\\documents\\csharp\\desarrollo\\cpaciente\\cpaciente\\cpaciente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\cpaciente.csproj|solutionrelative:cpaciente\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\CPaciente.Web.csproj|c:\\users\\alexis aldana\\documents\\csharp\\desarrollo\\cpaciente\\cpaciente\\cpaciente\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\CPaciente.Web.csproj|solutionrelative:cpaciente\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\CPaciente.Web.csproj|c:\\users\\alexis aldana\\documents\\csharp\\desarrollo\\cpaciente\\cpaciente\\cpaciente\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\CPaciente.Web.csproj|solutionrelative:cpaciente\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\cpaciente.csproj|c:\\users\\alexis aldana\\documents\\csharp\\desarrollo\\cpaciente\\cpaciente\\cpaciente\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{021516A3-00BF-87D3-C622-262EC32102F8}|cpaciente\\cpaciente.csproj|solutionrelative:cpaciente\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 2099,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\_Imports.razor",
+              "RelativeDocumentMoniker": "cpaciente\\_Imports.razor",
+              "ToolTip": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\_Imports.razor",
+              "RelativeToolTip": "cpaciente\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T02:18:19.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\App.razor",
+              "RelativeDocumentMoniker": "cpaciente\\App.razor",
+              "ToolTip": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\App.razor",
+              "RelativeToolTip": "cpaciente\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T02:14:52.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\Program.cs",
+              "RelativeDocumentMoniker": "cpaciente\\Program.cs",
+              "ToolTip": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\Program.cs",
+              "RelativeToolTip": "cpaciente\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T01:47:51.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "cpaciente\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\Alexis Aldana\\Documents\\Csharp\\Desarrollo\\CPaciente\\cpaciente\\cpaciente\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "cpaciente\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-22T01:57:25.861Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

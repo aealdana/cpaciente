@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Backend/">
+    <Project Path="Cpaciente.Api/Cpaciente.Api.csproj" Id="c8217b1e-6e72-43fd-8dbf-10c5dec74551" />
+    <Project Path="Cpaciente.Data/Cpaciente.Data.csproj" Id="96c4e6e3-0b01-490f-be00-725ab2f5d676" />
+    <Project Path="CPaciente.Handlers/CPaciente.Handlers.csproj" Id="7782d3dc-ee59-4d2e-aa3d-b89112f0bd0b" />
+    <Project Path="Cpaciente/Cpaciente.csproj" Id="d2b79df8-2a42-4e3e-8667-7f69f06b16cb" />
+  </Folder>
+  <Folder Name="/Interface/">
+    <Project Path="Cpaciente.Web.Modules/Cpaciente.Web.Modules.csproj" Id="87723b3d-69b4-41cb-a9e2-d0c53c9a5822" />
+    <Project Path="Cpaciente.Web/Cpaciente.Web.csproj" />
+  </Folder>
+</Solution>

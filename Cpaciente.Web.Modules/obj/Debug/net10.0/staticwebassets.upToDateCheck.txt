@@ -1,0 +1,3 @@
+wwwroot\background.png
+wwwroot\exampleJsInterop.js
+C:\Users\Alexis Aldana\Documents\Csharp\Desarrollo\CPaciente\cpaciente\Cpaciente.Web.Modules\wwwroot\exampleJsInterop.js
