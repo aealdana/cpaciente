@@ -13,6 +13,8 @@ namespace Cpaciente.Api
             // Add services to the container.
             builder.Services.AddAuthorization();
 
+            builder.Services.AddControllers();
+
 
             builder.Services.AddMediatR(cfg =>
             {
@@ -23,6 +25,8 @@ namespace Cpaciente.Api
             options.UseSqlServer(builder.Configuration.GetConnectionString("CpacienteDb")));
 
             var app = builder.Build();
+
+            app.MapControllers();
 
             // Configure the HTTP request pipeline.
 
