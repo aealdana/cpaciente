@@ -1,0 +1,77 @@
+﻿@using Radzen
+@using Radzen.Blazor
+@inject IPatientService PatientService
+@inject DialogService DialogService
+
+<RadzenTemplateForm TItem="Patient" Data="@patient" Submit="@OnSubmit">
+    <RadzenStack Gap="1rem">
+
+        <RadzenFormField Text="Nombre" Style="width:100%">
+            <RadzenTextBox @bind-Value="patient.FirstName" Name="FirstName" />
+            <RadzenRequiredValidator Component="FirstName" Text="El nombre es requerido" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Apellido" Style="width:100%">
+            <RadzenTextBox @bind-Value="patient.LastName" Name="LastName" />
+            <RadzenRequiredValidator Component="LastName" Text="El apellido es requerido" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Documento" Style="width:100%">
+            <RadzenTextBox @bind-Value="patient.DocumentNumber" Name="DocumentNumber" />
+            <RadzenRequiredValidator Component="DocumentNumber" Text="El documento es requerido" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Telefono" Style="width:100%">
+            <RadzenTextBox @bind-Value="patient.Phone" Name="Phone" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Correo" Style="width:100%">
+            <RadzenTextBox @bind-Value="patient.Email" Name="Email" />
+            <RadzenEmailValidator Component="Email" Text="Correo invalido" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Fecha de nacimiento" Style="width:100%">
+            <RadzenDatePicker @bind-Value="patient.BirthDate" Name="BirthDate" DateFormat="dd/MM/yyyy" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Genero" Style="width:100%">
+            <RadzenDropDown @bind-Value="patient.Gender" Name="Gender"
+                            Data="@(new[] { "Masculino", "Femenino", "Otro" })" AllowClear="true" />
+        </RadzenFormField>
+
+        <RadzenFormField Text="Direccion" Style="width:100%">
+            <RadzenTextArea @bind-Value="patient.Address" Name="Address" Rows="2" />
+        </RadzenFormField>
+
+        <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0.5rem">
+            <RadzenButton Text="Cancelar" ButtonStyle="ButtonStyle.Light"
+                          Click="@(() => DialogService.Close(null))" />
+            <RadzenButton Text="Guardar" ButtonType="ButtonType.Submit" ButtonStyle="ButtonStyle.Primary" />
+        </RadzenStack>
+
+    </RadzenStack>
+</RadzenTemplateForm>
+
+@code {
+    [Parameter] public int PatientId { get; set; }
+
+    private Patient patient = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (PatientId != 0)
+        {
+            var existing = await PatientService.GetByIdAsync(PatientId);
+            if (existing is not null) patient = existing;
+        }
+    }
+
+    private async Task OnSubmit()
+    {
+        Patient saved = PatientId == 0
+            ? await PatientService.AddAsync(patient)
+            : await PatientService.UpdateAsync(patient);
+
+        DialogService.Close(saved);
+    }
+}

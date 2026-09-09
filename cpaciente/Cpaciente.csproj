@@ -12,4 +12,8 @@
     <Folder Include="Queries\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cpaciente.Sdk\Cpaciente.Sdk.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,3 +1,0 @@
-C:\Users\Alexis Aldana\Documents\Csharp\Desarrollo\CPaciente\cpaciente\Cpaciente.Web.Modules\obj\Debug\net10.0\staticwebassets.build.json
-C:\Users\Alexis Aldana\Documents\Csharp\Desarrollo\CPaciente\cpaciente\Cpaciente.Web.Modules\obj\Debug\net10.0\staticwebassets.build.json
-C:\Users\Alexis Aldana\Documents\Csharp\Desarrollo\CPaciente\cpaciente\Cpaciente.Web.Modules\obj\Debug\net10.0\staticwebassets.build.json

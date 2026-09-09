@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Cpaciente.Data\Cpaciente.Data.csproj" />
+    <ProjectReference Include="..\Cpaciente.Sdk\Cpaciente.Sdk.csproj" />
+    <ProjectReference Include="..\Cpaciente\Cpaciente.csproj" />
+  </ItemGroup>
+
 </Project>

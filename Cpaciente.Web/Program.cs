@@ -1,5 +1,7 @@
+using Cpaciente.Web.Pages;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Radzen;
 
 namespace Cpaciente.Web
 {
@@ -12,6 +14,14 @@ namespace Cpaciente.Web
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+            builder.Services.AddScoped<DialogService>();
+            builder.Services.AddScoped<NotificationService>();
+            builder.Services.AddScoped<TooltipService>();
+            builder.Services.AddScoped<ContextMenuService>();
+
+
+            builder.Services.AddScoped<IPatientService, PatientService>();
 
             await builder.Build().RunAsync();
         }

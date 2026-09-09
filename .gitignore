@@ -1,0 +1,32 @@
+## Build de .NET — se regenera con `dotnet build`, nunca se sube
+bin/
+obj/
+
+## Archivos de usuario de Visual Studio (configuracion local, no del proyecto)
+*.user
+.vs/
+
+## Si alguien del equipo usa Rider o VS Code
+.idea/
+.vscode/
+
+## Publicacion / artefactos de salida
+publish/
+*.publish.xml
+
+## Bases de datos locales (LocalDB, SQLite) — nunca subir datos locales
+*.mdf
+*.ldf
+*.db
+*.db-shm
+*.db-wal
+
+## Logs locales
+*.log
+
+## Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+## NO ignorar: la carpeta Migrations/ de EF Core es codigo versionado,
+## no se regenera sola — debe subirse siempre.

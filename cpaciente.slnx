@@ -3,6 +3,7 @@
     <Project Path="Cpaciente.Api/Cpaciente.Api.csproj" Id="c8217b1e-6e72-43fd-8dbf-10c5dec74551" />
     <Project Path="Cpaciente.Data/Cpaciente.Data.csproj" Id="96c4e6e3-0b01-490f-be00-725ab2f5d676" />
     <Project Path="CPaciente.Handlers/CPaciente.Handlers.csproj" Id="7782d3dc-ee59-4d2e-aa3d-b89112f0bd0b" />
+    <Project Path="Cpaciente.Sdk/Cpaciente.Sdk.csproj" Id="84749d4b-fc61-4f24-9a33-a4038e0cbe33" />
     <Project Path="Cpaciente/Cpaciente.csproj" Id="d2b79df8-2a42-4e3e-8667-7f69f06b16cb" />
   </Folder>
   <Folder Name="/Interface/">

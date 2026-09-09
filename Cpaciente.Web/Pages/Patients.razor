@@ -1,0 +1,101 @@
+﻿@page "/Pacientes"
+@using Radzen
+@using Radzen.Blazor
+@inject IPatientService PatientService
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+
+<PageTitle>Pacientes</PageTitle>
+
+<RadzenStack Gap="1rem">
+
+    <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.SpaceBetween" AlignItems="AlignItems.Center">
+        <RadzenText TextStyle="TextStyle.H4">Pacientes</RadzenText>
+        <RadzenButton Text="Agregar Paciente" Icon="add" ButtonStyle="ButtonStyle.Primary" Click="@OpenAddPatientDialog" />
+    </RadzenStack>
+
+    <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center">
+        <RadzenTextBox @bind-Value="searchTerm" Placeholder="Buscar por nombre, documento o telefono..."
+                       Change="@(async () => await LoadPatients())" Style="width: 320px;" />
+        <RadzenButton Text="Buscar" Icon="search" ButtonStyle="ButtonStyle.Light" Click="@LoadPatients" />
+        <RadzenButton Text="Limpiar" ButtonStyle="ButtonStyle.Light" Variant="Variant.Text"
+                      Click="@(async () => { searchTerm = string.Empty; await LoadPatients(); })" />
+    </RadzenStack>
+
+    <RadzenDataGrid Data="@patients" TItem="Patient" IsLoading="@isLoading"
+                    AllowSorting="true" AllowPaging="true" PageSize="10" EmptyText="No se encontraron pacientes">
+        <Columns>
+            <RadzenDataGridColumn TItem="Patient" Property="FirstName" Title="Nombre" />
+            <RadzenDataGridColumn TItem="Patient" Property="LastName" Title="Apellido" />
+            <RadzenDataGridColumn TItem="Patient" Property="DocumentNumber" Title="Documento" />
+            <RadzenDataGridColumn TItem="Patient" Property="Phone" Title="Telefono" />
+            <RadzenDataGridColumn TItem="Patient" Property="Email" Title="Correo" />
+            <RadzenDataGridColumn TItem="Patient" Title="Acciones" Sortable="false" Filterable="false" Width="140px">
+                <Template Context="patient">
+                    <RadzenButton Icon="edit" ButtonStyle="ButtonStyle.Light" Size="ButtonSize.Small"
+                                  Click="@(() => OpenEditPatientDialog(patient.Id))" class="rz-mr-1" />
+                    <RadzenButton Icon="delete" ButtonStyle="ButtonStyle.Danger" Variant="Variant.Flat" Size="ButtonSize.Small"
+                                  Click="@(() => DeletePatient(patient.Id))" />
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid>
+
+</RadzenStack>
+
+@code {
+    private List<Patient> patients = new();
+    private string searchTerm = string.Empty;
+    private bool isLoading;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadPatients();
+    }
+
+    private async Task LoadPatients()
+    {
+        isLoading = true;
+        patients = await PatientService.SearchAsync(searchTerm);
+        isLoading = false;
+    }
+
+    private async Task OpenAddPatientDialog()
+    {
+        var result = await DialogService.OpenAsync<PatientFormDialog>("Agregar Paciente",
+            new Dictionary<string, object?> { { "PatientId", 0 } },
+            new DialogOptions { Width = "600px", Height = "auto", Resizable = false, Draggable = true });
+
+        if (result is not null)
+        {
+            NotificationService.Notify(NotificationSeverity.Success, "Paciente agregado correctamente");
+            await LoadPatients();
+        }
+    }
+
+    private async Task OpenEditPatientDialog(int patientId)
+    {
+        var result = await DialogService.OpenAsync<PatientFormDialog>("Editar Paciente",
+            new Dictionary<string, object?> { { "PatientId", patientId } },
+            new DialogOptions { Width = "600px", Height = "auto", Resizable = false, Draggable = true });
+
+        if (result is not null)
+        {
+            NotificationService.Notify(NotificationSeverity.Success, "Paciente actualizado correctamente");
+            await LoadPatients();
+        }
+    }
+
+    private async Task DeletePatient(int patientId)
+    {
+        var confirm = await DialogService.Confirm("¿Desea eliminar este paciente?", "Confirmar eliminacion",
+            new ConfirmOptions { OkButtonText = "Si", CancelButtonText = "No" });
+
+        if (confirm == true)
+        {
+            await PatientService.DeleteAsync(patientId);
+            NotificationService.Notify(NotificationSeverity.Success, "Paciente eliminado");
+            await LoadPatients();
+        }
+    }
+}

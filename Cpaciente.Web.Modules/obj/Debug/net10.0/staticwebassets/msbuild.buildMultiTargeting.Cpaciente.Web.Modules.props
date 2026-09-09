@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Cpaciente.Web.Modules.props" />
-</Project>
