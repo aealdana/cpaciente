@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cpaciente.Data;
 
-public class ClinicaDbContext : DbContext
+public class CpacienteDbContext : DbContext
 {
-    public ClinicaDbContext(DbContextOptions<ClinicaDbContext> options) : base(options) { }
+    public CpacienteDbContext(DbContextOptions<CpacienteDbContext> options) : base(options) { }
 
     public DbSet<Patient> Patients => Set<Patient>();
     public DbSet<Staff> Staff => Set<Staff>();
