@@ -17,4 +17,15 @@
         string DiagnosisType
     );
 
+    public sealed record DiseaseOutput(
+        int Id,
+        string Code,
+        string Name,
+        bool IsChronic
+    );
+    public sealed record AllergyOutput(
+        int Id,
+        string Name,
+        string? Type
+    );
 }
