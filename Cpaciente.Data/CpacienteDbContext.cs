@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cpaciente.Data;
 
-public class CpacienteDbContext : DbContext
+public class CpacienteDbContext : IdentityDbContext<ApplicationUser>
 {
     public CpacienteDbContext(DbContextOptions<CpacienteDbContext> options) : base(options) { }
 
